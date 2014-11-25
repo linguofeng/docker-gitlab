@@ -238,7 +238,7 @@ production: &base
   satellites:
     # Relative paths are relative to Rails.root (default: tmp/repo_satellites/)
     path: "{{GITLAB_DATA_DIR}}/gitlab-satellites/"
-    timeout: 30
+    timeout: 180
 
   ## Backup settings
   backup:
@@ -279,7 +279,7 @@ production: &base
     # This value can be increased if you have very large commits
     max_size: {{GITLAB_MAX_SIZE}} # 20.megabytes
     # Git timeout to read a commit, in seconds
-    timeout: 10
+    timeout: 60
 
   #
   # 4. Extra customization
